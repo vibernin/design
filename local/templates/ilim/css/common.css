@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    scrollbar-width: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+input:active, input:focus{
+    outline: none;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url(../img/jpg/bg.jpg);
+    position: relative;
+    color: silver;
+}
+body:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, .80);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#calculator{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.select, .count{
+    width: 48%;
+}
+select, #count {
+    width: 100%;
+    height: 35px;
+    border: none;
+    padding: 0px 15px;
+    flex-shrink: 0;
+}
+#count{
+    padding: 0px 15px;
+}
+.text{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.btn{
+    margin-top: 20px;
+    width: 100%;
+}
+#submit{
+    height: 40px;
+    width: 100%;
+}
+#error{
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+#result{
+    max-width: 600px;
+    text-align: left;
+    width: 100%;
+}
+#result ul{
+    list-style: none;
+}
+#result ul li{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid silver;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+    .content{
+        padding: 0px 15px;
+    }
+    #calculator{
+        max-width: 100%;
+    }
+    .select, .count{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .text{
+        margin-bottom: 10px;
+    }
+}
